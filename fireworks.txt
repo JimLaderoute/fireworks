@@ -1,0 +1,7 @@
+global background 0 0 0 newtons 0 angle 90 accel -0.015 random_newtons false random_angle false fade true
+emitter nparticles 300 px 0.10 py 0.20 style burst color 255 0 0 alpha 0.5 r 1.0 shrink -0.001 newtons 2.4 angle 90 accel 0.01 random_newtons true random_angle true
+emitter nparticles 300 px 0.50 py 0.20 style burst color 255 255 255 alpha 0.5 r 1.0 shrink -0.001 newtons 2.4 angle 90 accel 0.01 random_newtons true random_angle true
+emitter nparticles 300 px 0.90 py 0.20 style burst color 0 0 255 alpha 0.5 r 2.0 shrink -0.001 newtons 2.4 angle 90 accel 0.01 random_newtons true random_angle true
+emitter nparticles 100 px 0.30 py 0.90 style serial color 0 255 0 alpha 1 r 1 shrink 0 newtons 1 angle 90 accel 0.01 random_newtons true random_angle true
+emitter nparticles 100 px 0.70 py 0.90 style serial color 255 0 255 alpha 1 r 1 shrink 0 newtons 1 angle 90 accel 0.01 random_newtons true random_angle true
+

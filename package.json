@@ -1,0 +1,14 @@
+{
+  "name": "fireworks",
+  "version": "1.0.0",
+  "description": "Fireworks Simulator",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Jim Laderoute",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^11.2.3"
+  }
+}

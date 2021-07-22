@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Fireworks Creator</title>
+</head>
+<body>
+
+    <div class="page_wrapper">
+    <div class="mytitle">Fireworks Creator</div>
+    <div class="canvas_wrapper">
+        <canvas id="icanvas" style="background:black;" width="800" height="450" tabindex="1">Canvas Not Supported In Your Browser</canvas>
+        <br><input id="rotate" type="button"  value="Rotate to Bottom">
+        <input id="deleteLast" type="button"  value="Delete Top">
+        <input id="resetAll" type="button"  value="Delete All">
+        Fade <input id="g_fadeall"  type="checkbox">
+    </div>
+
+    <div class="global_initial">
+        <div  class="global_force">
+            <form>
+                <fieldset>
+                    <legend>Global Force (effects all particles)</legend>
+                    <!-- controls go here -->
+                    <div><label for="g_color">Background</label><input id="g_color" type="color" value="#000000"></div>
+                    <div><label for="g_newtons">Newtons</label><input id="g_newtons"  type="number" value="0" step="0.1"></div>
+                    <div><label for="g_angle">Angle</label><input id="g_angle"  type="number" value="90"></div>
+                    <div><label for="g_accel">Accel</label><input id="g_accel"  type="number" value="-0.005" step="0.01"></div>
+                    <div><label for="g_random_newtons">RandomNewtons</label> <input id="g_random_newtons" type="checkbox"></div>
+                    <div> <label for="g_random_angle">RandomAngle</label> <input id="g_random_angle" type="checkbox"></div>
+                </fieldset>
+            </form>
+        </div> 
+
+        <div class="initial_impulse">    
+            <form>
+                <fieldset>
+                    <legend>Initial Impulse Force (for new emitters)</legend>
+                    <!-- controls go here -->
+                    <div><label for="l_color">Color</label><input id="l_color" type="color" value="#dd0000"></div>
+                    <div><label for="alpha">Alpha</label><input id="alpha" type="number" value="0.2" step="0.1"></div>
+                    <div><label for="size">Size</label><input id="size" type="number" value="2"></div>
+                    <div><label for="shrink_r">Shrink</label><input id="shrink_r" type="number" value="-0.01" step="0.01"></div>
+                    <div><label for="newtons">Newtons</label><input id="newtons" type="number" value="2.4" step="0.1"></div>
+                    <div><label for="angle">Angle</label><input id="angle" type="number" value="90"></div>
+                    <div><label for="accel">Accel</label><input id="accel" type="number" value="0" step="0.01"></div>
+                    <div><label for="random_newtons">RandomNewtons</label><input id="random_newtons" type="checkbox" checked></div>
+                    <div><label for="random_angle">RandomAngle</label><input id="random_angle" type="checkbox" checked></div>
+                    <div><label for="serial">Serial</label><input id="serial" type="checkbox" name="SerialEmitter" checked></div>
+                </fieldset>
+            </form>
+        </div>
+    </div> <!-- global_initial combined -->
+
+    <!-- The Commands Box -->
+    <div class="command_wrapper" >
+        <fieldset style="width:-1;">
+            <legend align="center">Commands</legend>
+            <textarea id="settings" class="mytextarea"></textarea><br>
+            <input id="loadsettings" type="file">
+            <input id="savesettings" type="button" value="Save...">
+            <input id="copytoclipboard" type="button" value="Copy To Clipboard">
+            <input id="runcommands" type="button" value="Run Commands">
+        </fieldset>
+    </div>  
+</div> <!-- page_container -->
+
+   <script src="../../libs/p5/p5.min.js"></script>
+   <script src="../../libs/softwarejim_utils.js"></script>
+   <script src="./color.js" > </script>
+   <script src="./force.js" ></script>
+   <script src="./particle.js" ></script>
+   <script src="./emitter.js" > </script>
+   <script src="./sketch.js" > </script>
+</body>
+</html>
